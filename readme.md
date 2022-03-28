@@ -23,7 +23,7 @@ This is the easiest way to get started with the extension.
 In your project's root directory, create a directory named *extensions*. 
 clone this repo under the *extensions* directory using command
 
-``` git clone https://afasdf.htss/cocos-creator-poki-sdk ```
+``` git clone https://github.com/vkbsb/cocos-creator-poki-sdk ```
 
 ## 2.Enable extension
 Once you have done the installation go to the extensions manager and ensure that the 
