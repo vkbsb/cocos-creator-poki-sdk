@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.unload = exports.load = void 0;
 const fs_extra_1 = require("fs-extra");
 const path_1 = __importDefault(require("path"));
-const PACKAGE_NAME = 'poki-build';
+const PACKAGE_NAME = 'poki-sdk';
 function log(...arg) {
     return console.log(`[${PACKAGE_NAME}] `, ...arg);
 }
