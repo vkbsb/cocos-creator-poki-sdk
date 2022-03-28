@@ -59,7 +59,15 @@ CCPokiSDK.isAdBlocked()  //-- in JS it's PokiSDK.isAdBlocked()
 ```
 
 You will notice that you do not see an equivalent to ``PokiSDK.set_debug(value)`` this is because the extension sets this automatically based on the build you make. 
+```
+________________________________________________________
+|   Build Type               |     PokiSDK Debug       |
+|______________________________________________________|
+| Preview Build              | PokiSDK.set_debug(true) |
+| web-mobile:Debug(checked)  | PokiSDK.set_debug(true) |
+|web-mobile:Debug(un-checked)| PokiSDK.set_debug(false)|
 
+```
 
 **SiteLock**
 
