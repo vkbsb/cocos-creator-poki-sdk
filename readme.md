@@ -23,7 +23,9 @@ This is the easiest way to get started with the extension.
 In your project's root directory, create a directory named *extensions*. 
 clone this repo under the *extensions* directory using command
 
-``` git clone https://github.com/vkbsb/cocos-creator-poki-sdk ```
+``` 
+git clone https://github.com/vkbsb/cocos-creator-poki-sdk
+```
 
 ## 2.Enable extension
 Once you have done the installation go to the extensions manager and ensure that the 
@@ -75,7 +77,6 @@ ________________________________________________________
 **Reward Break**
 
 Typically in your game you would want to reward players once they watched the reward video. The following are the steps you need to follow to implement the same using this extension. 
-
 - Register for a call back on `cc.game` for `EVENT_REWARD_BREAK_DONE`
 - if `arguments[0] == true` we can give player reward, else don't reward.  
 
@@ -84,20 +85,10 @@ Check out [DemoScript.ts](./templates/demo/DemoScript.ts) for referrence.
 
 **SiteLock**
 
-Poki provides a sitelock code to the developers which helps ensure that the game is playable only on poki's website. Please collect it from your dev contact. Once you get it, paste the code in the ``SiteLock.js`` file at the appropriate location.
+Poki provides a sitelock code to the developers which helps ensure that the game is playable only on poki's website. Please collect it from your dev contact. Once you get it, paste the code in the [SiteLock.js](./templates/poki-api/SiteLock.js) file at the appropriate location.
 
-The following code snippet shows the contents of SiteLock.js file
-```typescript
-function SiteLock(){
-    //Paste you Poki SiteLock Code Below. 
-    
-}
-
-module.exports = {
-    init: SiteLock
-}
-```
 
 **Generate Build**
+
 You will need to make ``web-mobile`` build for the extension to do the poki sdk integration. 
 #TODO screentshots for web-mobile web creation.
