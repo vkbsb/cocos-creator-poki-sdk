@@ -28,10 +28,13 @@ clone this repo under the *extensions* directory using command
 ## 2.Enable extension
 Once you have done the installation go to the extensions manager and ensure that the 
 poki-build extension is enabled. 
+
 open extension manager
+
 ![extension-manager-open](./docs/images/extension-manager-launch.png)
 
 Under project tab, ensure that poki-sdk is enabled. If it's not enabled, enable it. 
+
 ![extension-enable](./docs/images/poki_build_extension_enable.png)
 
 The extension creates the following files in your project directory.
