@@ -85,7 +85,7 @@ Check out [DemoScript.ts](./templates/demo/DemoScript.ts) for referrence.
 
 **SiteLock**
 
-Poki provides a sitelock code to the developers which helps ensure that the game is playable only on poki's website. Please collect it from your dev contact. Once you get it, paste the code in the [SiteLock.js](./template/poki-api/SiteLock.js) file at the appropriate location.
+Poki provides a sitelock code to the developers which helps ensure that the game is playable only on poki's website. Please collect it from your dev contact. Once you get it, paste the code in the [SiteLock.js](./templates/poki-api/SiteLock.js) file at the appropriate location.
 
 
 **Generate Build**
