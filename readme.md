@@ -28,7 +28,7 @@ clone this repo under the *extensions* directory using command
 ## 2.Enable extension
 Once you have done the installation go to the extensions manager and ensure that the 
 poki-build extension is enabled. 
-//screenshot of the poki-build enabled. 
+![extension-enable](./docs/images/poki_build_extension_enable.png)
 
 The extension creates the following files in your project directory.
 - preview-template/index.ejs
