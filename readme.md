@@ -61,13 +61,23 @@ CCPokiSDK.isAdBlocked()  //-- in JS it's PokiSDK.isAdBlocked()
 You will notice that you do not see an equivalent to ``PokiSDK.set_debug(value)`` this is because the extension sets this automatically based on the build you make. 
 ```
 ________________________________________________________
-|   Build Type               |     PokiSDK Debug       |
-|______________________________________________________|
-| Preview Build              | PokiSDK.set_debug(true) |
-| web-mobile:Debug(checked)  | PokiSDK.set_debug(true) |
-|web-mobile:Debug(un-checked)| PokiSDK.set_debug(false)|
-
+| Build Type                  | PokiSDK Debug           |
+|_____________________________|_________________________|
+| Preview Build               | PokiSDK.set_debug(true) |
+| web-mobile:Debug(checked)   | PokiSDK.set_debug(true) |
+| web-mobile:Debug(un-checked)| PokiSDK.set_debug(false)|
+---------------------------------------------------------
 ```
+
+**Reward Break**
+
+Typically in your game you would want to reward players once they watched the reward video. The following are the steps you need to follow to implement the same using this extension. 
+
+- Register for a call back on `cc.game` for `EVENT_REWARD_BREAK_DONE`
+- if `arguments[0] == true` we can give player reward, else don't reward.  
+
+Check out [DemoScript.ts](./templates/demo/DemoScript.ts) for referrence. 
+
 
 **SiteLock**
 
