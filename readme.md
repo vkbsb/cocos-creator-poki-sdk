@@ -62,6 +62,7 @@ You will notice that you do not see an equivalent to ``PokiSDK.set_debug(value)`
 
 
 **SiteLock**
+
 Poki provides a sitelock code to the developers which helps ensure that the game is playable only on poki's website. Please collect it from your dev contact. Once you get it, paste the code in the ``SiteLock.js`` file at the appropriate location.
 
 The following code snippet shows the contents of SiteLock.js file
