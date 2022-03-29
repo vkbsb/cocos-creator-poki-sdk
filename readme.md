@@ -40,11 +40,11 @@ git clone https://github.com/vkbsb/cocos-creator-poki-sdk
 Once you have done the installation go to the extensions manager and ensure that the 
 poki-build extension is enabled. 
 
-open extension manager
+1. open extension manager
 
 ![extension-manager-open](./docs/images/extension-manager-launch.png)
 
-Under project tab, ensure that poki-sdk is enabled. If it's not enabled, enable it. 
+2. Under project tab, ensure that poki-sdk is enabled. If it's not enabled, enable it. 
 
 ![extension-enable](./docs/images/poki_build_extension_enable.png)
 
