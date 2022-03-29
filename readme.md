@@ -19,13 +19,22 @@ You can search and install the extension directly from the cocos store.
 This is the easiest way to get started with the extension. 
 //screenshots of the store and install process. 
 
-### From Source
-In your project's root directory, create a directory named *extensions*. 
-clone this repo under the *extensions* directory using command
+### From Source/Release
+Download the extension zip file from 
+```
+https://github.com/vkbsb/cocos-creator-poki-sdk/releases/download/FirstRelease/poki-sdk-v1.0.zip
+```
 
+Or download the source code as a zip file.  
 ``` 
 git clone https://github.com/vkbsb/cocos-creator-poki-sdk
 ```
+
+1. Once this is done, you can launch extensions manager in cocos creator editor
+![extension-manager-open](./docs/images/extension-manager-launch.png)
+2. Switch to project tab and click on add extension button
+![extension-add](./docs/images/import_extension_project.png)
+
 
 ## 2.Enable extension
 Once you have done the installation go to the extensions manager and ensure that the 
