@@ -64,22 +64,22 @@ The extension creates the following files in your project directory.
 In your component scripts, you will be able to import CCPokiSDK and use it to interact with the PokiSDK. The following are the functions that are available for you to use from your game scripts. Checkout the DemoScript.ts for example usage.
 
 ```typescript
-CCPokiSDK.gameplay_start() //-- in JS it's PokiSDK.gameplayStart()
-CCPokiSDK.gameplay_stop() //-- in JS it's PokiSDK.gameplayStop()
-CCPokiSDK.commercial_break() //-- in JS it's PokiSDK.commercialBreak()
-CCPokiSDK.rewarded_break() //-- in JS it's PokiSDK.rewardedBreak()
-CCPokiSDK.shareable_url(params, callback) //-- in JS it's PokiSDK.shareableURL({}).then(url => {})
-local value = CCPokiSDK.get_url_param(key) //-- in JS it's PokiSDK.getURLParam('id')
+CCPokiSDK.gameplayStart() //-- in JS it's PokiSDK.gameplayStart()
+CCPokiSDK.gameplayStop() //-- in JS it's PokiSDK.gameplayStop()
+CCPokiSDK.commercialBreak() //-- in JS it's PokiSDK.commercialBreak()
+CCPokiSDK.rewardBreak() //-- in JS it's PokiSDK.rewardedBreak()
+CCPokiSDK.shareableURL(params, callback) //-- in JS it's PokiSDK.shareableURL({}).then(url => {})
+local value = CCPokiSDK.getURLParam(key) //-- in JS it's PokiSDK.getURLParam('id')
 ```
 
-You will notice that you do not see an equivalent to ``PokiSDK.set_debug(value)`` this is because the extension sets this automatically based on the build you make. 
+You will notice that you do not see an equivalent to ``PokiSDK.setDebug(value)`` this is because the extension sets this automatically based on the build you make. 
 ```
 ________________________________________________________
 | Build Type                  | PokiSDK Debug           |
 |_____________________________|_________________________|
-| Preview Build               | PokiSDK.set_debug(true) |
-| web-mobile:Debug(checked)   | PokiSDK.set_debug(true) |
-| web-mobile:Debug(un-checked)| PokiSDK.set_debug(false)|
+| Preview Build               | PokiSDK.setDebug(true) |
+| web-mobile:Debug(checked)   | PokiSDK.setDebug(true) |
+| web-mobile:Debug(un-checked)| PokiSDK.setDebug(false)|
 ---------------------------------------------------------
 ```
 
