@@ -22,7 +22,7 @@ This is the easiest way to get started.
 //screenshots of the store and install process. 
 
 ### From Source/Release
-Download the extension archive [poki-sdk-v1.0.zip](https://github.com/vkbsb/cocos-creator-poki-sdk/releases/download/FirstRelease/poki-sdk-v1.0.zip). 
+Download the extension archive [poki-sdk-v1.1.zip](https://github.com/vkbsb/cocos-creator-poki-sdk/releases/download/v1.1/poki-sdk-v1.1.zip). 
 
 Or download the source code as a zip file.  
 ``` 
@@ -33,7 +33,7 @@ git clone https://github.com/vkbsb/cocos-creator-poki-sdk
 ![extension-manager-open](./docs/images/extension-manager-launch.png)
 2. Switch to the project tab and click on add extension button
 ![extension-add](./docs/images/import_extension_project.png)
-3. Browse to the [poki-sdk-v1.0.zip](https://github.com/vkbsb/cocos-creator-poki-sdk/releases/download/FirstRelease/poki-sdk-v1.0.zip) file you have downloaded and click open. 
+3. Browse to the [poki-sdk-v1.1.zip](https://github.com/vkbsb/cocos-creator-poki-sdk/releases/download/v1.1/poki-sdk-v1.1.zip) file you have downloaded and click open. 
 ![pick-extension-archive](./docs/images/pick_extension_zip.png)
 
 
