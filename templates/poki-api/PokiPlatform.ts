@@ -1,4 +1,4 @@
-import { game, Game, log } from "cc"
+import { game } from "cc"
 
 const PokiSDK = (window as any).PokiSDK
 
@@ -35,11 +35,6 @@ export class CCPokiSDK
     static gameplayStart(){
         PokiSDK.gameplayStart()
     }
-
-    static isAdBlocked():boolean{
-        return PokiSDK.isAdBlocked()
-    }
-
 
     static shareableURL(params:any){
         // if run on e.g. https://poki.com/en/g/my-awesome-game it will return 
