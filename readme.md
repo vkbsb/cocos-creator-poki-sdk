@@ -64,6 +64,7 @@ The extension creates the following files in your project directory.
 In your component scripts, you will be able to import CCPokiSDK and use it to interact with the PokiSDK. The following are the functions that are available for you to use from your game scripts. Checkout the DemoScript.ts for example usage.
 
 ```typescript
+CCPokiSDK.isAdBlocked() //-- in JS it's PokiSDK.isAdBlocked()
 CCPokiSDK.gameplayStart() //-- in JS it's PokiSDK.gameplayStart()
 CCPokiSDK.gameplayStop() //-- in JS it's PokiSDK.gameplayStop()
 CCPokiSDK.commercialBreak() //-- in JS it's PokiSDK.commercialBreak()

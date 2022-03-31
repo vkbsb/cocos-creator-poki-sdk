@@ -46,6 +46,10 @@ export class CCPokiSDK
         });
     }
 
+    static isAdBlocked():boolean{
+        return PokiSDK.isAdBlocked()
+    }
+
     static getURLParam(param_name:string){
         return PokiSDK.getURLParam(param_name)
     }
