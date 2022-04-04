@@ -102,3 +102,7 @@ Poki provides a sitelock code to the developers which helps ensure that the game
 
 You will need to make ``web-mobile`` build for the extension to do the PokiSDK integration. 
 #TODO screentshots for web-mobile web creation.
+
+**Submit your game on Poki**
+
+On developers.poki.com you can submit your game with Poki. If we think your game is a good fit for our playground, we will reach out to you!
