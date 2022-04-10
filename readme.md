@@ -53,7 +53,6 @@ The extension creates the following files in your project directory.
 - preview-template/index.ejs
 - build-templates/common/application.ejs
 - build-templates/web-mobile/index.ejs
-- assets/poki-api/SiteLock.js
 - assets/poki-api/PokiPlatform.ts
 - assets/demo/demo.scene
 - assets/demo/DemoScript.ts
@@ -95,13 +94,13 @@ Check out [DemoScript.ts](./templates/demo/DemoScript.ts) for reference.
 
 **SiteLock**
 
-Poki provides a sitelock code to the developers which helps ensure that the game is playable only on Poki's website. Please collect it from your dev contact. Once you get it, paste the code in the [SiteLock.js](./templates/poki-api/SiteLock.js) file at the appropriate location.
+Poki provides a sitelock code to the developers which helps ensure that the game is playable only on Poki's website. Please collect it from your dev contact. Once you get it, paste the code in the ``SiteLock`` field of the ``poki-sdk`` section of the ``web-mobile`` build. 
 
+![SiteLock Code](./docs/images/poki_site_lock.png)
 
-**Generate Build**
+Please note that the sitelock code is embedded in the build only when you make a build with debug box un-checked. 
 
-You will need to make ``web-mobile`` build for the extension to do the PokiSDK integration. 
-#TODO screentshots for web-mobile web creation.
+![Web-mobile-release](./docs/images/web-mobile-build-release.png)
 
 **Submit your game on Poki**
 
