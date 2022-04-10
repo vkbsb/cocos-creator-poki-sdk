@@ -1,7 +1,6 @@
 
 import { _decorator, Label, Component, game, log, AudioSource } from 'cc';
 import { CCPokiSDK } from '../poki-api/PokiPlatform';
-import SiteLock from '../poki-api/SiteLock.js'
 
 const { ccclass, property } = _decorator;
 
@@ -14,10 +13,6 @@ export class DemoScript extends Component {
     audioSource:AudioSource = null
 
     start () {
-
-        //Trigger the sitelock to prevent users from playing on other websites. 
-        SiteLock.init()
-
         game.on(CCPokiSDK.EVENT_REWARD_BREAK_DONE, this.onRewardBreakDone, this)
         game.on(CCPokiSDK.EVENT_COMMERCIAL_BREAK_DONE, this.onCommercialBreakDone, this)
         game.on(CCPokiSDK.EVENT_SHRABLE_URL_READY, this.onSharableLinkReady, this)
