@@ -2,7 +2,7 @@
     "name": "poki-sdk",
     "title": "i18n:poki-sdk.title",
     "package_version": 2,
-    "version": "1.2.0",
+    "version": "1.2.2",
     "author": "Vamsi Krishna Veligatla",
     "description": "i18n:poki-sdk.description",
     "main": "./dist/main.js",
