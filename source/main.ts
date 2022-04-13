@@ -51,3 +51,9 @@ export const load:BuildPlugin.load = ()=>{
 export const unload:BuildPlugin.Unload = ()=>{
     console.log("Poki plugin-disabled")
 }
+
+export const methods: { [key: string]: (...any: any) => any } = {
+    openPanel() {
+        Editor.Panel.open(PACKAGE_NAME);
+    },
+};

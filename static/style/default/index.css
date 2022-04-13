@@ -1,0 +1,37 @@
+#app {
+    color: white;
+    margin: auto;
+    width: 180px;
+}
+
+div {
+    background-color: white;
+    color:black;
+}
+
+.bar {
+    background-color: #02A6F2;
+    height:60px;
+    width:100%;
+    color:white;
+}
+
+.infobox-header {
+    background-color: #02A6F2;
+    height:30px;
+    font-size: large;
+}
+
+.infobox {
+    border: 2px solid #02A6F2;
+    margin: 10px;
+    font-size:medium
+}
+
+p {
+    margin:auto;
+    padding: 10px;
+    /* width: "80%"; */
+    /* background-color: #E5F8FB; */
+    font-size: medium;
+}

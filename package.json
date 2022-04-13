@@ -6,8 +6,39 @@
     "author": "Vamsi Krishna Veligatla",
     "description": "i18n:poki-sdk.description",
     "main": "./dist/main.js",
+    "panels": {
+        "default": {
+            "title": "i18n:poki-sdk.title",
+            "type": "dockable",
+            "main": "dist/panels/default/script",
+            "size": {
+                "min-width": 400,
+                "min-height": 300,
+                "width": 800,
+                "height": 600
+            }
+        }
+    },
     "contributions": {
-        "builder":"./dist/builder.js"
+        "messages": {
+            "open-panel": {
+                "methods": ["openPanel"]
+            }
+        },
+        "menu": [
+            {
+                "path": "i18n:menu.extension/",
+                "label": "i18n:poki-sdk.menubar",
+                "message": "open-panel"
+            }
+        ],
+        "builder":"./dist/builder.js",
+        "asset-db": {
+            "mount": {
+                "path": "./docs/images",
+                "readonly": true
+            }
+        }
     },
     "dependencies": {
         "@types/fs-extra": "^5.0.4",

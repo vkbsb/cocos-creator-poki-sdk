@@ -1,0 +1,48 @@
+<div style="height:100%;overflow: scroll;">
+    <div class="bar">
+         <br/><h1 id="app"> Poki SDK </h1> 
+    </div>
+   
+    <p>
+        Once you have enabled the <b>PokiSDK</b> plugin, all the required files 
+        are setup for your project to make <b>web-mobile</b> builds.
+    </p>
+    
+    <div class="infobox">
+        <div class="infobox-header" style="height:30px;">
+            <ui-icon value="info"></ui-icon> Note
+        </div>
+        <p>
+            You can checkout the following files for example usage.
+            <br/><ui-link type="assetUrl" value="db://assets/demo/DemoScript.ts">DemoScript.ts</ui-link>
+            <br/><ui-link type="assetUrl" value="db://assets/poki-api/PokiPlatform.ts">PokiPlatform.ts</ui-link>
+        </p>
+
+    </div>
+
+    <h2> Generating Build </h2> 
+    <p>
+        As mentioned earlier, you should be making web-mobile builds for the PokiSDK to work as expected. 
+
+        <ui-image value="db://poki-sdk/web-mobile-build-release.png/texture" 
+            style="width:100%;height:500px;"></ui-image> 
+
+        Once you have the build dialog, scroll down to the poki-sdk section where you will be prompted to provide 
+        the site lock code. This will be provided by your contact from Poki. 
+        
+        <ui-image value="db://poki-sdk/poki_site_lock.png/texture" 
+        style="width:100%;height:500px;"></ui-image>
+
+        <div class="infobox" style="border-color: #F48224;">
+            <div class="infobox-header" style="height:30px;background-color: #F48224;">
+                <ui-icon value="warn"></ui-icon> Warning
+            </div>
+            <p>
+                When a release build is generated, the sitelock code is added to the build which prevents you from testing locally. 
+                Please makde a debug build or use the preview button to test your code. 
+            </p>
+ 
+        </div>
+    </p>
+        
+</div>

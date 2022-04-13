@@ -1,5 +1,6 @@
 module.exports={
     title:"Poki SDK Plugin",
+    menubar:"Poki SDK Info",
     ruleTest_msg:"Verify that the field complies with the rules",
     options:{
         enterCocos:"Please Enter cocos",
