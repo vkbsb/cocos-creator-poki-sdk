@@ -34,13 +34,11 @@
   <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
 
   <script src="//game-cdn.poki.com/scripts/v2/poki-sdk.js"></script>
-  
   <script src="./sitelock.js"></script>
 
   <link rel="stylesheet" type="text/css" href="<%= cssUrl %>"/>
 
 </head>
-
 <body>
   <script>
     PokiSDK.init().then(
@@ -63,10 +61,10 @@
     });
     window.addEventListener('wheel', ev => ev.preventDefault(), { passive: false });
   </script>
-
-  <div id="GameDiv">
+  
+  <div id="GameDiv" cc_exact_fit_screen="true">
       <div id="Cocos3dGameContainer">
-        <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
+        <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="99"></canvas>
       </div>
     </div>
   <%- include(cocosTemplate, {}) %>
