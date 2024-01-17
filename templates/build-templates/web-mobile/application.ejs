@@ -9,7 +9,6 @@ export class Application {
         cc = engine;
         cc.game.onPostBaseInitDelegate.add(this.onPostInitBase.bind(this)); // Listening for engine start process events onPostBaseInitDelegate
         cc.game.onPostSubsystemInitDelegate.add(this.onPostSystemInit.bind(this)); // Listening for engine start process events onPostSubsystemInitDelegate
-        cc.game.onPostProjectInitDelegate.add(this.onProjectDataEvent.bind(this));
 
         //inform the poki sdk that the game is loading.
         PokiSDK.gameLoadingStart();
@@ -24,7 +23,7 @@ export class Application {
 
     onPostSystemInit () {
         // Implement some custom logic
-        console.log("OnPostSystemInit")
+        console.log("OnPostSystemInit");
     }
 
     onProjectDataEvent(){
@@ -40,14 +39,12 @@ export class Application {
                 //      preloadBundles: [{ bundle: 'main', version: 'xxx' }],
                 // }
                 profiling: {
-                    showFPS: this.showFPS,
+                    showFPS: this.showFPS
                 }
             }
         }).then(() => {
-            cc.game.run(()=>{
-                //Inform PokiSDK that we have finished loading the game.
-                PokiSDK.gameLoadingFinished()
-            })
+            PokiSDK.gameLoadingFinished();
+            return cc.game.run();
         });
     }
 }
