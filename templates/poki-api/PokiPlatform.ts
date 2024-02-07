@@ -8,6 +8,10 @@ export class CCPokiSDK
     static EVENT_COMMERCIAL_BREAK_DONE:string = "pcvr"
     static EVENT_SHRABLE_URL_READY:string = "psur"
 
+    static sitelock(gameId: string): void {
+        navigator.sendBeacon('https://leveldata.poki.io/data', gameId);
+    }
+
     static rewardBreak(){
         try{
             const game_instance = game
