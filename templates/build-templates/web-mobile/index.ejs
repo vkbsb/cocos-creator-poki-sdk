@@ -34,7 +34,6 @@
   <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
 
   <script src="//game-cdn.poki.com/scripts/v2/poki-sdk.js"></script>
-  <script src="./sitelock.js"></script>
 
   <link rel="stylesheet" type="text/css" href="<%= cssUrl %>"/>
 
@@ -42,15 +41,10 @@
 <body>
   <script>
     PokiSDK.init().then(
-    () => {
-        console.log("Poki SDK successfully initialized");
-        // fire your function to continue to game
-    }   
-    ).catch(
-    () => {
-        console.log("Initialized, but the user likely has adblock");
-        // fire your function to continue to game
-    }
+      () => {
+          console.log("Poki SDK successfully initialized");
+          // fire your function to continue to game
+      }
     );
 
     //Poki solution for disabling page scroll.
