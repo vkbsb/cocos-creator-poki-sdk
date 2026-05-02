@@ -59,20 +59,67 @@ The extension creates the following files in your project directory.
 
 ![folders-created](./docs/images/poki_files_added.png)
 
-## 3.Usage 
-In your component scripts, you will be able to import CCPokiSDK and use it to interact with the PokiSDK. The following are the functions that are available for you to use from your game scripts. Checkout the DemoScript.ts for example usage.
+## 3.Usage
+In your component scripts, you can import `CCPokiSDK` and use it as a thin wrapper around the Poki SDK. Checkout the [DemoScript.ts](./templates/demo/DemoScript.ts) for the legacy event-based flow.
 
 ```typescript
-CCPokiSDK.isAdBlocked() //-- in JS it's PokiSDK.isAdBlocked()
-CCPokiSDK.gameplayStart() //-- in JS it's PokiSDK.gameplayStart()
-CCPokiSDK.gameplayStop() //-- in JS it's PokiSDK.gameplayStop()
-CCPokiSDK.commercialBreak() //-- in JS it's PokiSDK.commercialBreak()
-CCPokiSDK.rewardBreak() //-- in JS it's PokiSDK.rewardedBreak()
-CCPokiSDK.shareableURL(params, callback) //-- in JS it's PokiSDK.shareableURL({}).then(url => {})
-local value = CCPokiSDK.getURLParam(key) //-- in JS it's PokiSDK.getURLParam('id')
+import { CCPokiSDK } from '../poki-api/PokiPlatform';
+
+CCPokiSDK.gameplayStart();
+CCPokiSDK.gameplayStop();
+
+const rewardGranted = await CCPokiSDK.rewardedBreak({
+  size: 'medium',
+  onStart: () => {
+    console.log('Rewarded ad started');
+  },
+});
+
+await CCPokiSDK.commercialBreak(() => {
+  console.log('Commercial break started');
+});
+
+const shareableUrl = await CCPokiSDK.shareableURL({ id: 'myid', type: 'mytype' });
+const user = await CCPokiSDK.getUser(); // User | null
+
+CCPokiSDK.openExternalLink('https://example.com');
+CCPokiSDK.movePill(0, 24);
+CCPokiSDK.measure('game', 'loading', 'start');
+
+const value = CCPokiSDK.getURLParam('id');
+const language = CCPokiSDK.getLanguage();
 ```
 
-You will notice that you do not see an equivalent to ``PokiSDK.setDebug(value)`` this is because the extension sets this automatically based on the build you make. 
+The preview and web-mobile templates initialize the Poki SDK automatically before your game runs, so the wrapper does not expose `CCPokiSDK.init()`.
+
+The wrapper now exposes these direct methods:
+
+- `rewardedBreak(onStart | params)`
+- `commercialBreak(onStart)`
+- `shareableURL(params)`
+- `getURLParam(key)`
+- `getLanguage()`
+- `getUser()`
+- `getToken()`
+- `login()`
+- `captureError(err)`
+- `gameLoadingFinished()`
+- `gameplayStart()`
+- `gameplayStop()`
+- `setDebug(toggle)`
+- `setLogging(toggle)`
+- `enableEventTracking(cmpIndex)`
+- `openExternalLink(url)`
+- `movePill(topPercent, topPx)`
+- `measure(category, action, label, metadata?)`
+
+Legacy compatibility is still preserved:
+
+- `rewardBreak()` is still available and still emits `EVENT_REWARD_BREAK_DONE`.
+- `commercialBreak()` still emits `EVENT_COMMERCIAL_BREAK_DONE`.
+- `shareableURL()` still emits `EVENT_SHRABLE_URL_READY`.
+
+You also do not need to call `PokiSDK.setDebug(value)` manually in the usual setup because the extension sets debug automatically based on the build you make.
 ```
 ________________________________________________________
 | Build Type                  | PokiSDK Debug           |
@@ -85,12 +132,35 @@ ________________________________________________________
 
 **Rewarded Break**
 
-This ad type is used for optional rewarded actions, for example watching an ad video in exchange for in-game currency, a revive, a level skip... Here are the following steps you need to follow to implement it using this extension. 
+This ad type is used for optional rewarded actions, for example watching an ad video in exchange for in-game currency, a revive, a level skip.
+
+If you prefer the legacy flow used by the demo scene:
 - Register for a call back on `cc.game` for `EVENT_REWARD_BREAK_DONE`
-- if `arguments[0] == true` we can give player reward, else don't reward.  
+- if `arguments[0] == true` we can give player reward, else don't reward
+
+If you prefer the direct promise-based flow:
+
+```typescript
+const success = await CCPokiSDK.rewardedBreak({
+  size: 'medium',
+  onStart: () => {
+    // pause audio or input here
+  },
+});
+
+if (success) {
+  // give reward
+}
+```
 
 Check out [DemoScript.ts](./templates/demo/DemoScript.ts) for reference. 
 
+**Template refresh**
+
+The extension copies the Poki template files into your project only if the destination files do not already exist. If you update the extension in an existing game project, you may need to manually refresh:
+- `preview-template/index.ejs`
+- `build-templates/web-mobile/index.ejs`
+- `assets/poki-api/PokiPlatform.ts`
 
 **SiteLock**
 
